@@ -2,7 +2,7 @@ module Api::V1
     class TweetsController < ApplicationController
 
         def index
-            @tweets = Tweet.order('created_at DESC')
+            @tweets = Tweet.all.order('created_at DESC')
             render json: @tweets 
         end
 
@@ -16,15 +16,6 @@ module Api::V1
 			@tweet.update_attributes(tweet_params)
 			render json: @tweet
 		end
-
-		def destroy
-			@tweet = Tweet.find(params[:id])
-			if @tweet.destroy
-			  head :no_content, status: :ok
-			else
-			  render json: @tweet.errors, status: :unprocessable_entity
-			end
-		  end
 
         private
 
