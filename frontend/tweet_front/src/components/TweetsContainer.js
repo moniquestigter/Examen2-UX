@@ -58,7 +58,7 @@ class TweetsContainer extends Component{
 
 	render() {
 		return(
-			<div>
+			<div className="middled">
 				<div>
 					<button className="newTweetButton" onClick={this.addNewTweet}>
 						New Tweet

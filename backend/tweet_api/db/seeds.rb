@@ -10,8 +10,27 @@
 tweet = Tweet.create(
     [
         {
-            body: "Me gusta la clase de Experiencia de Usuario",
+            body: "How much for the horse tornado? Sir, that's a carousel. I must have it.",
             username: "La chela"
-        }
+        },
+
+        {
+            body: "'Um.' - First horse that got ridden",
+            username: "Homeboy"
+        },
+
+        {
+            body: "what did we do to deserve dogs",
+            username: "cats"
+        },
+        {
+            body: "I want to die.",
+            username: "Piers Morgan"
+        },
+
+        {
+            body: "Drones are trending",
+            username: "Martha Stewart"
+        },
     ]
 )

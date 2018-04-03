@@ -5,6 +5,8 @@
   .ui.dividing.header {
     margin-top: 1em;
     margin-bottom: 2em;
+    color: lightseagreen;
+    font-size: 30px;
   }
   
   i.icon {
