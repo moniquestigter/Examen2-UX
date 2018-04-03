@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+tweet = Tweet.create(
+    [
+        {
+            body: "Me gusta la clase de Experiencia de Usuario",
+            username: "La chela"
+        }
+    ]
+)
