@@ -36,12 +36,13 @@ class TweetForm extends Component{
     render() {
         return(
             <div className= "tile">
-                <form onBlur={this.handleBlur }>
-                    <input className="input" type="text" name="body" 
-                    placeholder="Enter the tweet" value={this.state.body} 
+                <form onBlur={this.handleBlur}>
+                    <textarea className="input" name="body" placeholder="Write your tweet:"
+                    value={this.state.body} 
+                    onChange={this.handleInput}></textarea>
+                    <input className="input" type="text" name="username" placeholder="Username"
+                    value={this.state.username} 
                     onChange={this.handleInput} />
-                    <textarea className="input" name="username" placeholder="Username: "
-                    value={this.state.username} onChange={this.handleInput}></textarea>
                 </form>
             </div>
         );

@@ -5,11 +5,8 @@ import TweetsContainer from './components/TweetsContainer'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h1>Tweets</h1>
-        </div>
-        <TweetsContainer />
+      <div>
+      <TweetsContainer />
       </div>
     );
   }

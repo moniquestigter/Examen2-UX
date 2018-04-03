@@ -34,10 +34,9 @@ class TweetsContainer extends Component{
 				}
 			}
 		).then(response => {
-			//agregar las nuevas ideas sin tener que refresh manualmente 
 			console.log(response)
 			const tweets = update(this.state.tweets, {
-				$splice: [[0,0, response.data]]
+				$splice: [[0,0,response.data]]
 			})
 			this.setState({
 				tweets: tweets,
@@ -66,7 +65,7 @@ class TweetsContainer extends Component{
 					</button>
 				</div>
 			{this.state.tweets.map((tweet) => {
-				if(this.state.editing === tweet.id){
+				if(this.state.editingTweetId === tweet.id){
 					return(<TweetForm tweet={tweet} key={tweet.id} updateTweet={this.updateTweet}/>)
 				} else {
 					return (<Tweet tweet = {tweet} key={tweet.id} />)

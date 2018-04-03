@@ -1,9 +1,19 @@
 import React from 'react'
 
-const Tweet = ({tweet}) =>
-    <div className= "tile" key={tweet.id}>
-        <h4>{tweet.body}</h4>
-        <p>{tweet.username}</p>
-    </div> //forzozamente se tiene que tenes un div entre elementos de html, porque sino react da error
+class Tweet extends React.Component {
+    render() {
+        return (
+        <div className='item'>
+            <div className='middle aligned content'>
+                <div className='description'>
+                    <a href={this.props.body}>
+                    </a>
+                    <p> {this.props.username} </p>
+                </div>
+            </div>
+        </div>
+        );
+    }
+}
 
 export default Tweet
